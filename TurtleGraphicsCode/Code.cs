@@ -1,33 +1,60 @@
 ﻿using System;
 
-namespace TurtleGraphicsCode {
+namespace TurtleGraphicsCode
+{
 
-	public class Code {
+    public class Code
+    {
 
-		/// <summary>
-		/// This is the place to put your turtle code
-		/// </summary>
-		public Turtle ToExecute() {
-			Turtle t = new Turtle();
-			t.Rotate(-90);
+        /// <summary>
+        /// This is the place to put your turtle code
+        /// </summary>
+        public Turtle ToExecute()
+        {
+            Turtle t = new Turtle();
+            t.Rotate(-90);
 
-			for (int i = 0; i < 20; i++) {
-				DrawSection(t, 100);
-			}
-			return t;
-		}
 
-		void DrawSection(Turtle t, int p) {
-			t.Forward(10);
-			t.StoreTurtlePosition();
-			t.Rotate(-45);
-			t.Forward(p);
-			t.RestoreTurtlePosition();
-			t.Rotate(45);
-			t.Forward(p);
-			t.RestoreTurtlePosition(true);
-		}
-	}
+
+            for (int e = 0; e < 60; e++) 
+            {
+
+
+
+                t.StoreTurtlePosition();
+
+
+
+                for (int i = 0; i < 20; i++)
+                {
+                    DrawSection(t, 100);
+                }
+                t.RestoreTurtlePosition();
+                t.Rotate(45);
+
+
+
+
+                
+            }
+            return t;
+        }
+
+        
+
+
+        void DrawSection(Turtle t, int p)
+        {
+            t.Forward(10);
+            t.StoreTurtlePosition();
+            t.Rotate(-45);
+            t.Forward(p);
+            t.RestoreTurtlePosition();
+            t.Rotate(45);
+            t.Forward(p);
+            t.RestoreTurtlePosition(true);
+        }
+    }
 }
 
 
